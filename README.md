@@ -26,3 +26,8 @@ The server which gathers the data and process them is a [`nodejs` server](http:/
 
 The communication between the belt and the Nodejs server is done through a [`Zigbee` wireless network]() to an intermediate Arduino, which will transmit the data to the server. In the other hand, the SensorTag send the data directly to the server using Bluetooth Low Energy (BLE).
 The server is connected to the Arduino by USB.
+
+## Requirement of this projet
+
+ * OS: Linux or Mac OS
+ * Installation of [`noble`](https://npmjs.org/package/noble) functionnal.
