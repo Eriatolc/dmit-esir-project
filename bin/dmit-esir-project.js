@@ -56,5 +56,5 @@ var httpServer = new server( config );
 httpServer.run();
 
 // Start the SensorTag Deamon
-var sensorTagDeamon = new SensorTagDeamon( config );
+var sensorTagDeamon = new SensorTagDeamon();
 sensorTagDeamon.start();
