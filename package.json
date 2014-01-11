@@ -12,7 +12,7 @@
 		"async" : "0.2.x",
 		"sensortag" : "0.1.6"
 	},
-	"main": "bin/pizza-commander.js",
+	"main": "bin/dmit-esir-project.js",
 	"directories": {
 		"bin": "./bin",
 		"lib": "./lib",
