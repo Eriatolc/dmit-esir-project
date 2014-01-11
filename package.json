@@ -1,0 +1,24 @@
+{
+	"name": "dmit-esir-project",
+	"version": "0.1.0",
+	"description": "Server and client-sides to telemonitor sensors on patient.",
+	"author": "Clotaire Delanchy <clo.delanchy@gmail.com>",
+	"license": "MIT",
+	"private" : true,
+	"preferGlobal": false,
+	"dependencies": {
+		"commander": "1.0.x",
+		"restify": "2.6.x",
+		"async" : "0.2.x",
+		"sensortag" : "0.1.6"
+	},
+	"main": "bin/pizza-commander.js",
+	"directories": {
+		"bin": "./bin",
+		"lib": "./lib",
+		"www": "./www"
+	},
+	"engine": {
+		"node": "0.10.x"
+	}
+}
