@@ -10,7 +10,8 @@
 		"commander": "1.0.x",
 		"restify": "2.6.x",
 		"async" : "0.2.x",
-		"sensortag" : "0.1.6"
+		"sensortag": "0.1.6",
+		"mongoskin": "0.6.x"
 	},
 	"main": "bin/dmit-esir-project.js",
 	"directories": {
