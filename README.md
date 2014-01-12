@@ -42,14 +42,24 @@ The server is connected to the Arduino by USB.
  * OS: Linux, Mac OS or Windows
  * Installation of [`nodejs`](http://nodejs.org/),
  * Installation of [`noble`](https://npmjs.org/package/noble) functionnal,
+ * Installation of `MongoDB`,
  * A [SensorTag](http://processors.wiki.ti.com/index.php/Bluetooth_SensorTag) from Texas Instruments,
  * A Bluetooth 4.0 Low Energy dongle to communicate with the `SensorTag`.
 
 ### Installing `nodejs`
 
-Node.js is a server-side framework who allows you to use JavaScript on this side. You can follow the detailed [download](http://nodejs.org/download/) and all the install instructions on the [Node.js](http://i.imgur.com/xVyoSl.jpg) website.
+Node.js is a server-side framework who allows you to use JavaScript on this side. You can follow the detailed [download](http://nodejs.org/download/) and all the install instructions on the [Node.js](http://nodejs.org/) website.
 
 Node.js comes with a little package manager for its modules. It is called `npm` for Node Package Manager. It is accessible by the `npm` command. Be sure you have it after the installation of Node.js, we will need it after.
+
+### MongoDB
+
+You can install MongoDB directly by your package manager in most of the cases (here on a Ubuntu system):
+
+	$ sudo apt-get update && sudo apt-get upgrade	# get an updated system
+	$ sudo apt-get install mongodb 				# install mongodb
+
+You can find all the detailed install process regarding to your personnal distribution on the [MongoDB website](http://www.mongodb.org/downloads).
 
 ## Installation guide
 
