@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-    <title>About the John Doe's falls and hearrate report</title>
+    <title>Alert's details</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./css/style.css" rel="stylesheet">
@@ -31,14 +31,16 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.html">Falls and HR</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html">Tracking</a></li>
-            <li class="active"><a href="#">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
+            <li class="active"><a href="index.html">Return</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -48,7 +50,11 @@
 
       <div class="starter-template">
         <h1> -- </h1>
-        <p class="lead">The report of falls detection, temperature, and hear rate of John Doe has been made by the students of ESIR and EUETIB of biomedical engineering under the supervision of Alfredo Hernandez and Di Ge from the LTSI, University of Rennes 1.<br/><br/>The data used in this programm are provided by a Texas Instrument SensorTag (falls and temperature) and by a Polaris belt (heartrate).<br/>The SensorTag part is using a Javascript librairie by samdeep mistry found on GitHub. The polaris part is using a selfmade Arduino - Zigbee duo to send the data to the computer.</p>
+        <p class="lead"><B>Details</B></p>
+        <p>
+          <li>Alert's type : {{type}} </li>
+          <li>Data : {{data}} </li>
+        </p>
       </div>
 
     </div><!-- /.container -->
