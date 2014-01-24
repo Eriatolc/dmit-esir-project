@@ -15,13 +15,15 @@
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/bootstrap.css" rel="stylesheet">
 
-
-    <!-- Custom styles for this template -->
-    
+    <!-- JS scripts -->
+    <script type="text/javascript" src="./js/mustache.js"></script>
+    <script type="text/javascript" src="./js/details.js"></script>
 
   </head>
 
   <body>
+
+   
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -46,25 +48,22 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container content">
 
-      <div class="starter-template">
-        <h1> -- </h1>
-        <p class="lead"><B>Details</B></p>
-        <p>
-          <li>Alert's type : {{type}} </li>
-          <li>Data : {{data}} </li>
-        </p>
+      <div class="starter-template" id="list">
+        <script id="details" type="text/mustache">
+        <h3>Details of the alert</h3>
+          <ul>
+            <li data-id=" {{_id}}"><b>Type :</b> {{type}} </li>
+            <li data-id=" {{_id}}"><b>Date :</b> {{date}} </li>
+            <li data-id=" {{_id}}"><b>Time :</b> {{time}} </li>
+            <li data-id=" {{_id}}"><b>Data :</b> {{data}} </li>
+          </ul>
+        </script>
       </div>
 
     </div><!-- /.container -->
 
-   
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
   </body>
 </html>

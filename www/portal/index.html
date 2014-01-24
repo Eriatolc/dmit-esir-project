@@ -15,8 +15,8 @@
     <link href="./css/style.css" rel="stylesheet">
     <link href="./css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <!-- <link href="starter-template.css" rel="stylesheet"> -->
+    <!-- JS scripts -->
+    <script type="text/javascript" src="./js/mustache.js"></script>
   </head>
 
   <body>
@@ -42,56 +42,48 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container content">
 
       <div class="starter-template">
-        <h1> -- </h1>
         <p class="lead">The report of falls detection, temperature, and hear rate of John Doe.</p>
       </div>
 
+      <div class="select button">
+        <p>
+        <span>
+         <label for="graph">Which report do you want to see?</label>
+          <select name="graph" id="graph">
+            <option value="fall">Falls</option>
+            <option value="temp">Temperature</option>
+            <option value="heart">Heartrate</option>
+          </select>
+         </span>
+        </p>
+      </div>
+
+      <div class="graphic">
+        <p>
+          <b id="graphTitle">{{type}}</b><br />
+          <a href="details.html"><img src="img/merica.jpg" alt="alt" title="Most American picture ever" /></a>
+        </p>
+      </div>
+
+      <div class="select button">
+        <p>
+        <span>
+         <label for="timespan">Which timespan do you want to see?</label>
+          <select name="timespan" id="timespan">
+            <option value="h">1 hour</option>
+            <option value="d">1 day</option>
+            <option value="w">1 week</option>
+            <option value="m">1 month</option>
+            <option value="y">1 year</option>
+          </select>
+         </span>
+        </p>
+      </div>
+    
     </div><!-- /.container -->
 
-    <div class="select button">
-      <p>
-      <span>
-       <label for="graph">Which report do want to see?</label>
-         <select name="graph" id="graph">
-           <option value="1">Falls</option>
-           <option value="2">Temperature</option>
-           <option value="3">Heartrate</option>
-        </select>
-       </span>
-      </p>
-    </div>
-
-    <div class="Graphic">
-      <p>
-        <B>{{type}}</B><br />
-        <a href="details.html"><img src="img/merica.jpg" alt="alt" title="Most American picture ever" /></a>
-      </p>
-    </div>
-
-    <div class="select button 2">
-      <p>
-      <span>
-       <label for="timespan">Which report do want to see?</label>
-         <select name="timespan" id="timespan">
-           <option value="h">1 hour</option>
-           <option value="d">1 day</option>
-           <option value="w">1 week</option>
-           <option value="m">1 month</option>
-           <option value="y">1 year</option>
-        </select>
-       </span>
-      </p>
-    </div>
-    
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
   </body>
 </html>
