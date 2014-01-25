@@ -1,5 +1,3 @@
-var id = '52d2e160b40f0e5e13000005';
-
 /** Initialisation of the data.
  * We get the data from the server and they will be used by Mustache
  * to fill the HTML page.
@@ -7,6 +5,11 @@ var id = '52d2e160b40f0e5e13000005';
  * @return: none.
  */
 function init() {
+
+	// Get the id at the end of the URL of the page
+	var url = document.URL;
+	var res = url.split("#");
+	var id = res[1];
 
 	// Get the Alert with an XHR
 	var xhr = new XMLHttpRequest();

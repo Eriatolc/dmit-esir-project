@@ -64,12 +64,10 @@
 
       <div class="graphic">
         <p>
-          <b id="graphTitle">{{type}}</b><br />
+          <b id="graphTitle">Falls</b><br />
           <a href="details.html"><img src="img/merica.jpg" alt="alt" title="Most American picture ever" /></a>
         </p>
       </div>
-
-
 
       <div class="select button">
         <p>
@@ -100,12 +98,12 @@
             </thead>
             <tbody>
               {{#items}}
-              <tr>
-                <td>{{type}}</td>
-                <td>{{date}}</td>
-                <td>{{time}}</td>
-                <td>{{data}}</td>
-              </tr>
+                <tr>
+                  <td data-id="{{_id}}"><a href="details.html#{{_id}}">{{type}}</a></td>
+                  <td data-id="{{_id}}"><a href="details.html#{{_id}}">{{date}}</a></td>
+                  <td data-id="{{_id}}"><a href="details.html#{{_id}}">{{time}}</a></td>
+                  <td data-id="{{_id}}"><a href="details.html#{{_id}}">{{data}}</a></td>
+                </tr>
               {{/items}}
               {{^items}}
               <tr colspan="4">
