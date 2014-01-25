@@ -17,6 +17,7 @@
 
     <!-- JS scripts -->
     <script type="text/javascript" src="./js/mustache.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
   </head>
 
   <body>
@@ -68,6 +69,8 @@
         </p>
       </div>
 
+
+
       <div class="select button">
         <p>
         <span>
@@ -81,6 +84,37 @@
           </select>
          </span>
         </p>
+      </div>
+
+      <div id="alertTab">
+        <script id="tab" type="text/mustache">
+          <h3>List of all the alerts received</h3>
+          <table class="table table-striped table-hover">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Data</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{#items}}
+              <tr>
+                <td>{{type}}</td>
+                <td>{{date}}</td>
+                <td>{{time}}</td>
+                <td>{{data}}</td>
+              </tr>
+              {{/items}}
+              {{^items}}
+              <tr colspan="4">
+                No record.
+              </tr>
+              {{/items}}
+            </tbody>
+          </table>  
+        </script>
       </div>
     
     </div><!-- /.container -->
