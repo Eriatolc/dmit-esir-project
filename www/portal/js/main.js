@@ -6,6 +6,9 @@
  */
 function init() {
 
+	// Set the listeners on the webpage
+	setListeners();
+
 	// Get the Alert with an XHR
 	var xhr = new XMLHttpRequest();
 	xhr.open('GET', '/api/search/alert', false);
@@ -15,7 +18,7 @@ function init() {
 	var response = JSON.parse(xhr.responseText);
 
 	var data = prepareData(response);
-	
+
 	// Generating the template using Mustache
 	var template = document.getElementById('tab').innerHTML;
 	var html = Mustache.render(template, data);
@@ -34,6 +37,16 @@ function prepareData(response) {
 	}
 
 	return data;
+}
+
+function setListeners() {
+	var list = document.getElementById('graph');
+	list.addEventListener('change', function() {
+		// We get the content when the selectedIndex change and we display it
+		// in the webpage correctly (above the graph)
+		var value = list.options[list.selectedIndex].innerHTML;
+		document.getElementById('graphTitle').innerHTML = value;
+	}, true);
 }
 
 // We use the init function only when the DOM is loaded
