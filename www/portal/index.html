@@ -20,6 +20,24 @@
     <script type="text/javascript" src="./js/main.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
     <script type="text/javascript">
+    // Get the Alert with an XHR
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', '/api/search/alert', false);
+    xhr.send();
+
+    // Parsing the response
+    var response = JSON.parse(xhr.responseText);
+
+    var data = response;
+    var item;
+    var date;
+    for(var i = 0; i<data.items.length; i++) {
+      date = new Date(data.items[i].date);
+      data.items[i].date = date.toDateString();
+      data.items[i].time = date.toTimeString();
+      data.items[i].data = JSON.stringify(data.items[i].data);
+    }
+
 $(fonction(){
   $('#container').graph1({
     chart: {
@@ -29,7 +47,7 @@ $(fonction(){
       text: 'Falls and HR'
     },
     xAxis:{
-      "une quelconsue echelle avec la date"
+      "une quelconque echelle avec la date"
       title: 'Date'
     },
     tooltip: {
