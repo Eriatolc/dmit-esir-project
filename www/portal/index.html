@@ -18,9 +18,47 @@
     <!-- JS scripts -->
     <script type="text/javascript" src="./js/mustache.js"></script>
     <script type="text/javascript" src="./js/main.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript">
+$(fonction(){
+  $('#container').graph1({
+    chart: {
+      type: 'column'
+    },
+    title:{
+      text: 'Falls and HR'
+    },
+    xAxis:{
+      "une quelconsue echelle avec la date"
+      title: 'Date'
+    },
+    tooltip: {
+                headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+                pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                    '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+                footerFormat: '</table>',
+                shared: true,
+                useHTML: true
+            },
+    plotOptions: {
+      column: {
+      pointPadding: 0.2,
+      borderWidth: 0
+      }
+    },
+    series: [amuse toi Clotaire{
+    name: 'nom',
+    data: [x, y, z]
+    }]
+  });
+});
+    </script>
   </head>
 
   <body>
+
+  <script src="./js/highcharts.js"></script>
+  <script src="./js/exporting.js"></script>
 
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
@@ -62,12 +100,9 @@
         </p>
       </div>
 
-      <div class="graphic">
-        <p>
-          <b id="graphTitle">Falls</b><br />
-          <a href="details.html"><img src="img/merica.jpg" alt="alt" title="Most American picture ever" /></a>
-        </p>
-      </div>
+
+
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 
       <div class="select button">
         <p>
