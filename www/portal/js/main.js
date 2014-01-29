@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /** Initialisation of the data.
  * We get the data from the server and they will be used by Mustache
  * to fill the HTML page.
@@ -52,7 +51,7 @@ function setListeners() {
 
 // We use the init function only when the DOM is loaded
 document.addEventListener('DOMContentLoaded', init, false);
-=======
+
 var data = {
 	labels : ["January","February","March","April","May","June","July"],
 	datasets : [
@@ -155,4 +154,3 @@ Bar.defaults = {
 	onAnimationComplete : null
 	
 }
->>>>>>> Commit des choses faites la semaine dernière
