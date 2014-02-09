@@ -18,7 +18,7 @@ var prog = require('commander');
 
 var pkg = require('../package');
 var server = require('../lib/server.js');
-var SensorTagDeamon = require('../lib/sensortagDeamon.js');
+var SensorTagDaemon = require('../lib/sensortagDaemon.js');
 var config = path.join(__dirname, '../lib/config.js');
 
 // CLI handling and Configuration
@@ -56,5 +56,5 @@ var httpServer = new server( config );
 httpServer.run();
 
 // Start the SensorTag Deamon
-var sensorTagDeamon = new SensorTagDeamon(httpServer);
-sensorTagDeamon.start();
+var sensorTagDaemon = new SensorTagDaemon(httpServer);
+sensorTagDaemon.start();
